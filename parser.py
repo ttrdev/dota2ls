@@ -95,6 +95,10 @@ def end_g(message):
 
         bot.send_message(message.chat.id, gg)
 
+@bot.message_handler(content_types=['text'])
+def txt(message):
+    text = "??"
+    bot.send_message(message.chat.id, text)
 
 if __name__ == "__main__":
     bot.polling(none_stop=True)
