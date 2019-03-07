@@ -82,7 +82,7 @@ def live_g(message):
         bot.send_message(message.chat.id, gg)
 
 @bot.message_handler(commands=['gend'])
-def live_g(message):
+def end_g(message):
     for game in end_games:
         gg = \
             game['event_date'] + " " + \
