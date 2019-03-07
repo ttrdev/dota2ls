@@ -64,8 +64,6 @@ def parse(url, headers):
     else:
         print("Error")
 
-parse(url, headers)
-
 
 @bot.message_handler(commands=['gstart'])
 def live_g(message):
@@ -78,8 +76,8 @@ def live_g(message):
             game['team_home_score'] + "-" + \
             game['team_score_away'] + " " + \
             game['team_away']
-
         bot.send_message(message.chat.id, gg)
+
 
 @bot.message_handler(commands=['gend'])
 def end_g(message):
@@ -92,15 +90,17 @@ def end_g(message):
             game['team_home_score'] + "-" + \
             game['team_score_away'] + " " + \
             game['team_away']
-
         bot.send_message(message.chat.id, gg)
+
 
 @bot.message_handler(content_types=['text'])
 def txt(message):
     text = "??"
     bot.send_message(message.chat.id, text)
 
+
 if __name__ == "__main__":
+    parse(url, headers)
     bot.polling(none_stop=True)
 
 
