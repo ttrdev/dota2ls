@@ -1,1 +1,1 @@
-worker: python dota2ls/parser.py
+web: python parser.py
